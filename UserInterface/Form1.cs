@@ -1191,5 +1191,51 @@ namespace UserInterface
         {
             SaveGame.Text = chooseOutputFileDialog.FileName;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var loadWork = LoadGame.Text;
+            LoadGame.Text = MassageLoadDate(LoadGame.Text);
+
+            var loadWave = SaveGame.Text;
+            SaveGame.Text = MassageSaveDate(SaveGame.Text);
+        }
+
+        private string MassageLoadDate(string GameText)
+        {
+            var thisDay = DateTime.Today.ToString();
+            var part1 = GameText.Substring(0, 48);
+            var part2 = thisDay.Substring(5, 2) + "-";
+            var part3 = thisDay.Substring(8, 2) + "-";
+            string part4 = " ";
+            if (GameText.Substring(51, 2) == "dd")
+            {
+                part4 = "1" + GameText.Substring(55, 4);
+            }
+            else
+            {
+                part4 = "2" + GameText.Substring(55, 4);
+            }
+
+            return part1 + part2 + part3 + part4;
+        }
+
+        private string MassageSaveDate(string GameText)
+        {
+            var thisDay = DateTime.Today.ToString();
+            var part1 = GameText.Substring(0, 48);
+            var part2 = thisDay.Substring(5, 2) + "-";
+            var part3 = thisDay.Substring(8, 2) + "-";
+            var part4 = " ";
+            if (GameText.Substring(51, 2) == "dd")
+            {
+                part4 = "1" + GameText.Substring(55, 5);
+            }
+            else
+            {
+                part4 = "2" + GameText.Substring(55, 5);
+            }
+            return part1 + part2 + part3 + part4;
+        }
     }
 }

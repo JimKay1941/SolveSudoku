@@ -167,6 +167,7 @@
             this.textAloneBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textDifficulty = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -1291,7 +1292,7 @@
             this.LoadGame.Name = "LoadGame";
             this.LoadGame.Size = new System.Drawing.Size(228, 20);
             this.LoadGame.TabIndex = 190;
-            this.LoadGame.Text = "C:\\Users\\europ\\Saved Games\\Sudoku\\ArizonaStar19-mm-dd-1.csv";
+            this.LoadGame.Text = "C:\\Users\\europ\\Saved Games\\Sudoku\\ArizonaStar20-mm-dd-1.csv";
             // 
             // label22
             // 
@@ -1310,7 +1311,7 @@
             this.SaveGame.Name = "SaveGame";
             this.SaveGame.Size = new System.Drawing.Size(228, 20);
             this.SaveGame.TabIndex = 192;
-            this.SaveGame.Text = "C:\\Users\\europ\\Saved Games\\Sudoku\\ArizonaStar19-mm-dd-1S.csv";
+            this.SaveGame.Text = "C:\\Users\\europ\\Saved Games\\Sudoku\\ArizonaStar20-mm-dd-1S.csv";
             // 
             // ReadGame
             // 
@@ -1411,6 +1412,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.WriteInput);
             this.groupBox1.Controls.Add(this.Output);
             this.groupBox1.Controls.Add(this.ReadGame);
@@ -1464,7 +1466,7 @@
             this.DepthLim.Name = "DepthLim";
             this.DepthLim.Size = new System.Drawing.Size(39, 20);
             this.DepthLim.TabIndex = 208;
-            this.DepthLim.Text = "1";
+            this.DepthLim.Text = "6";
             // 
             // label25
             // 
@@ -1564,6 +1566,16 @@
             this.textDifficulty.Name = "textDifficulty";
             this.textDifficulty.Size = new System.Drawing.Size(86, 20);
             this.textDifficulty.TabIndex = 220;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(16, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 33);
+            this.button1.TabIndex = 207;
+            this.button1.Text = "Massage Dates";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -1849,8 +1861,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textDifficulty;
         private System.Windows.Forms.Button WriteInput;
-
-
+        private System.Windows.Forms.Button button1;
     }
 }
 
